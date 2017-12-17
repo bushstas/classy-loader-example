@@ -9,9 +9,9 @@ const classy = require('classy-loader');
 classy.init({
     attributeName: 'class',
     extraAttributeName: 'classes',
-    globalPrefix: '',//'awesome-example-app',
+    globalPrefix: 'awesome-example-app',
     delimiter: '-',
-    obfuscation: true,
+    obfuscation: false,
     obfuscatedLength: 4,
     autoPrefixMode: true,
     prefixAutoResolving: 'content' // false | 'content' | 'file' | 'folder'

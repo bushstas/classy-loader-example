@@ -10,6 +10,7 @@ export default class Button  extends React.PureComponent {
 			<button class="self $classes">
 	        	{children}
 	        	<div class=".name .$name ..$name">
+	        		...
 	        	</div>
 	      	</button>
     	)

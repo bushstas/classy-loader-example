@@ -9,13 +9,12 @@ const classy = require('classy-loader');
 classy.init({
     attributeName: 'class',
     extraAttributeName: 'classes',
-    globalPrefix: 'example-app',
+    globalPrefix: 'awesome-example-app',
+    delimiter: '-',
     obfuscation: false,
     obfuscatedLength: 4,
-    addSuffixToAllNames: false,
-    addSuffixToSimpleNames: false,
     autoPrefixMode: false,
-    prefixAutoResolving: false // false | 'content' | 'file' | 'folder'
+    prefixAutoResolving: 'content' // false | 'content' | 'file' | 'folder'
 });
 
 
@@ -97,7 +96,6 @@ const config = {
     },
     plugins: [
         new webpack.DefinePlugin({
-            'process.env.NODE_ENV': JSON.stringify(env),
             'GLOBALS': JSON.stringify(CONFIG)
         }),
         new HtmlWebpackPlugin({
@@ -114,6 +112,6 @@ config.devServer = {
     historyApiFallback: true,
     inline: true
 };
-config.devtool = 'cheap-module-eval-source-map';
+//config.devtool = 'cheap-module-eval-source-map';
 
 module.exports = config;

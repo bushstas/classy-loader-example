@@ -2,27 +2,21 @@ import React from 'react';
 
 import './index.scss';
 
-export default function Button({classes, children, href, width, ...others}) {
-	classes = 'self $classes';
-	let props = {
-		className: classes,
-		...others
-	};
-	if (width) {
-		props.style = {
-			minWidth: width + 'px'
-		}
-	}
-	if (href) {
+export default class Button  extends React.PureComponent {  
+ 	render() {
+let className = $classy(color, '..color-', ['red', 'green']);
+className = $classy(number, '.color-', ['blue', 'yellow']);
+className = $classy(number, '..', ['one', 'two']);
+className = $classy(quality, '.', ['good', 'bad']);
+className = $classy(name, '', ['John', 'Rick']);
+ 		let {classes, children} = this.props;
+ 		let name = 'aaa';
 		return (
-			<a href={href} {...props}>
-				{children}
-			</a>
-		)
-	}
-	return (
-		<div {...props}>
-			{children}
-		</div>
-	)
+			<button class="  $$classes self $$a aaa $$b aaa">
+	        	{children}
+	        	<div class=".name .$name ..$name">
+	        	</div>
+	      	</button>
+    	)
+  	}
 }

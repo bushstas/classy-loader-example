@@ -11,8 +11,8 @@ export default class App extends React.PureComponent {
 		  classes: ".some-other-class"
 		};
 		return (
-			<div class=".self">
-				<h1 class=".title">
+			<div class="self">
+				<h1 class="title">
 					Classy Loader is awesome!
 				</h1>
 				<Button	classes="button::standart">

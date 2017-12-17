@@ -9,11 +9,11 @@ const classy = require('classy-loader');
 classy.init({
     attributeName: 'class',
     extraAttributeName: 'classes',
-    globalPrefix: 'awesome-example-app',
+    globalPrefix: '',//'awesome-example-app',
     delimiter: '-',
-    obfuscation: false,
+    obfuscation: true,
     obfuscatedLength: 4,
-    autoPrefixMode: false,
+    autoPrefixMode: true,
     prefixAutoResolving: 'content' // false | 'content' | 'file' | 'folder'
 });
 
@@ -64,14 +64,14 @@ const config = {
                 ]
             },
             { 
-                test: /\.(ttf|eot|svg|woff(2)?)(\S+)?$/,
+                test: /\.(ttf|eot|woff(2)?)(\S+)?$/,
                 loader: 'file-loader',
                 options: {
                     name: 'images/[name].[ext]'
                 }
             },
             { 
-                test: /\.(jpg|gif|svg|png?)(\S+)?$/,
+                test: /\.(jpg|jpeg|gif|svg|png?)(\S+)?$/,
                 loader: 'file-loader',
                 options: {
                     name: 'images/[name].[ext]'
